@@ -1,8 +1,41 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "DevIgnite";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="fire-overlay"></div> <!-- Fire background effect -->
+
+    <div class="container">
+        <header>
+            <h1>DevIgnite</h1>
+            <p>Igniting ideas powering the web</p>
+        </header>
+
+        <!-- Glowing Fire Animation -->
+        <section class="flame-container">
+            <div class="flame">
+                <div class="flame-effect"></div>
+                <div class="flame-effect"></div>
+                <div class="flame-effect"></div>
+            </div>
+        </section>
+
+        <main>
+            <section class="content">
+                <h2>Welcome to My Portfolio</h2>
+                <p>Explore my projects and learn more about my skills as a developer.</p>
+                <a href="/Projects" class="btn">View Projects</a>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
