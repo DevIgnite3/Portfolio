@@ -26,6 +26,7 @@
         <ul>
             <li><a asp-controller="Home" asp-action="Index">Home</a></li>
             <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+            <li><a asp-controller="Home" asp-action="AboutUs">About Us</a></li>
             <li><a asp-controller="Home" asp-action="Privacy">Privacy</a></li>
         </ul>
     </nav>
@@ -49,11 +50,11 @@
         <main>
             <!-- Intro Section -->
             <section class="content">
-                <h2>Welcome to My Portfolio</h2>
+                <h2>Welcome to Our Portfolio</h2>
                 <p>
-                    Dive into my <strong>Front-End</strong> and <strong>Back-End</strong> skill sets below.
-                    I combine user-centric design (with tools like Figma) and robust server-side
-                    logic to bring ambitious ideas to life.
+                    Welcome to DevIgnite! We are a dynamic freelance team of passionate developers who believe in 
+                    creating innovative, efficient, and user-centered solutions. With expertise in web and app development,
+                    we strive to ignite creativity and bring your vision to life through cutting-edge technology.
                 </p>
                 <!-- Two buttons: Explore My Skills (anchors to #skills-showcase) and Projects (route) -->
                 <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
@@ -112,16 +113,77 @@
             <section style="margin-top: 60px;">
                 <h2 class="section-title">What Makes Me Stand Out</h2>
                 <p class="section-description">
-                    Beyond code, I’m a problem-solver who thrives on collaboration.
-                    My GitHub repos (see <strong>Projects</strong> in the navbar) showcase
-                    everything from mobile fitness apps to advanced payment portals.
-                    Designing in Figma, building with secure back-end best practices,
-                    and deploying via robust CI/CD—these are my daily steps to delivering
-                    high-quality solutions.
+                    <strong>Collaboration:</strong> We view every project as a partnership. Your vision, combined with our 
+                    expertise, leads to better results. <br>
+                    <strong>Adaptability:</strong> Whether you’re a startup or an established company, we tailor our solutions
+                    to fit your specific needs. <br>
+                    <strong>Transparency:</strong> From start to finish, we keep communication clear and open so you're always
+                    in the loop. <br>
+                    <strong>Quality Over Quantity:</strong> We prioritize creating high-quality, functional solutions over 
+                    delivering fast, subpar work. Each project is treated with attention to detail and passion. <br>
+                    <strong>Continuous Improvement:</strong> Technology evolves fast, and so do we. Our team stays updated 
+                    with the latest trends and best practices in the industry to provide top-notch services.
                 </p>
             </section>
         </main>
     </div>
+
+    <section id="process" style="margin-top: 60px;">
+        <h2 class="section-title">Our Process</h2>
+        <p class="section-description">
+            At DevIgnite, we believe in a collaborative and iterative process that ensures the best possible outcome for every project. Here’s how we work:
+        </p>
+        <div class="process-steps" style="display: flex; justify-content: center; gap: 40px; margin-top: 30px;">
+            <!-- Step 1 -->
+            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+                <h3>Step 1: Discovery & Ideation</h3>
+                <p>
+                    We begin by understanding your business, your audience, and your goals. Through collaborative brainstorming sessions and research, we align on a clear vision for the project.
+                </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+                <h3>Step 2: Design</h3>
+                <p>
+                    Our design process focuses on creating intuitive, visually appealing interfaces. We use Figma to develop wireframes, prototypes, and high-fidelity designs that align with your brand.
+                </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+                <h3>Step 3: Development</h3>
+                <p>
+                    Once the design is finalized, we start coding using the latest frameworks and technologies. We ensure that both front-end and back-end components are seamlessly integrated.
+                </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+                <h3>Step 4: Testing</h3>
+                <p>
+                    Quality is paramount. We conduct rigorous testing to ensure that the product is bug-free and functions perfectly across all devices and platforms.
+                </p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+                <h3>Step 5: Launch</h3>
+                <p>
+                    After testing, we prepare for launch, ensuring everything is optimized and ready. We deploy the product and monitor its performance for any post-launch adjustments.
+                </p>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+                <h3>Step 6: Continuous Improvement</h3>
+                <p>
+                    Our work doesn’t stop at launch. We continue to gather feedback and iterate on the project to ensure it remains relevant and continues to meet your goals over time.
+                </p>
+            </div>
+        </div>
+    </section>
+
 
     <footer>
         <p>&copy; 2025 DevIgnite. All Rights Reserved.</p>
