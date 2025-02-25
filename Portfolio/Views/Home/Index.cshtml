@@ -18,10 +18,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <!-- Fire-themed overlay (optional) -->
+    <!-- (Optional) Fire-themed overlay, if your CSS uses it -->
     <div class="fire-overlay"></div>
 
-    <!-- Normal, always-visible NAVBAR with Projects link -->
+    <!-- NAVBAR -->
     <nav class="navbar-normal">
         <ul>
             <li><a asp-controller="Home" asp-action="Index">Home</a></li>
@@ -32,13 +32,13 @@
     </nav>
 
     <div class="container">
-        <!-- Flaming Title & Intro -->
+        <!-- HEADER / HERO AREA -->
         <header>
-            <h1>DevIgnite</h1>
+            <h1 class="glow-title">DevIgnite</h1>
             <p>Igniting Ideas, Powering the Web</p>
         </header>
 
-        <!-- Optional Flame Animation -->
+        <!-- FLAME ANIMATION -->
         <section class="flame-container">
             <div class="flame">
                 <div class="flame-effect"></div>
@@ -47,144 +47,128 @@
             </div>
         </section>
 
+        <!-- MAIN CONTENT -->
         <main>
-            <!-- Intro Section -->
+            <!-- INTRO SECTION -->
             <section class="content">
                 <h2>Welcome to Our Portfolio</h2>
                 <p>
-                    Welcome to DevIgnite! We are a dynamic freelance team of passionate developers who believe in 
+                    Welcome to DevIgnite! We are a dynamic freelance team of passionate developers who believe in
                     creating innovative, efficient, and user-centered solutions. With expertise in web and app development,
                     we strive to ignite creativity and bring your vision to life through cutting-edge technology.
                 </p>
-                <!-- Two buttons: Explore My Skills (anchors to #skills-showcase) and Projects (route) -->
-                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+                <div class="btn-container">
                     <a href="#skills-showcase" class="btn">Explore My Skills</a>
                     <a asp-controller="Home" asp-action="Projects" class="btn">View My Projects</a>
                 </div>
             </section>
 
-            <!-- Front-End vs. Back-End Showcase with fancy card boxes -->
-            <section id="skills-showcase" style="margin-top: 50px;">
-                <h2 class="section-title">Front-End & Back-End Mastery</h2>
-                <p class="section-description">
-                    From smooth, eye-catching interfaces to secure, scalable APIs—my approach covers it all.
-                    Here’s an overview of the tools, frameworks, and processes I rely on:
+            <!-- SKILLS SHOWCASE -->
+            <section id="skills-showcase">
+                <h2>Front-End &amp; Back-End Mastery</h2>
+                <p>
+                    At DevIgnite, we believe in the perfect balance between visually engaging interfaces and reliable, efficient back-end systems. Our team’s combined expertise enables us to develop full-stack solutions that are both user-friendly and highly scalable. Here’s an overview of the technologies and methodologies we rely on:
                 </p>
 
-                <div class="project-container" style="justify-content: center;">
-                    <!-- Front-End Card (mentioning Figma & design) -->
-                    <div class="project-box fancy-box">
+                <div class="skill-boxes">
+                    <!-- Front-End Card -->
+                    <div class="skill-card">
                         <h3>Front-End Magic</h3>
                         <p>
-                            I craft dynamic UIs using <strong>React</strong> or <strong>Angular</strong>,
-                            ensuring accessibility and performance. Whether I’m wireframing in
-                            <strong>Figma</strong> or coding transitions, my ultimate goal is an intuitive,
-                            engaging user experience.
+                            We craft interactive and accessible user experiences using <strong>React</strong>, <strong>Angular</strong>, and other modern frameworks. Our focus is on responsiveness and performance, ensuring that each interface looks stunning and runs smoothly across all devices.
                         </p>
                         <ul>
-                            <li><strong>UI/UX Design</strong> via Figma, modern layouts, responsive breakpoints</li>
-                            <li><strong>Animations &amp; State Management</strong> (GSAP, Redux, etc.)</li>
-                            <li><strong>Data Fetching</strong> with REST/GraphQL</li>
-                            <li><strong>Testing &amp; QA</strong> using Jest, Cypress</li>
+                            <li><strong>UI/UX Design</strong> using Figma and wireframing tools</li>
+                            <li><strong>Responsive Web Design</strong> for consistent experiences</li>
+                            <li><strong>Interactive Animations &amp; State Management</strong> (GSAP, Redux)</li>
+                            <li><strong>Testing &amp; QA</strong> with Jest, Cypress, and more</li>
                         </ul>
                     </div>
 
-                    <!-- Back-End Card (mentioning code hosting, Git, etc.) -->
-                    <div class="project-box fancy-box">
+                    <!-- Back-End Card -->
+                    <div class="skill-card">
                         <h3>Back-End Power</h3>
                         <p>
-                            On the back-end, I focus on <strong>ASP.NET Core</strong>,
-                            <strong>Node.js</strong>, or <strong>Express.js</strong>.
-                            Security (JWT/OAuth), data management (SQL/NoSQL), and
-                            a clean architecture are paramount. All code is version-controlled
-                            with <strong>GitHub</strong> or <strong>GitLab</strong> for transparency.
+                            Our back-end expertise covers <strong>ASP.NET Core</strong>, <strong>Node.js</strong>, and <strong>Express.js</strong>. From secure APIs and efficient data storage to reliable architecture, we ensure that every project is robust and scalable.
                         </p>
                         <ul>
-                            <li><strong>ASP.NET Core &amp; C#</strong> for enterprise apps</li>
-                            <li><strong>Node.js/Express</strong> for microservices & APIs</li>
-                            <li><strong>SQL &amp; NoSQL Databases</strong>: SQL Server, MongoDB, Firebase</li>
-                            <li><strong>CI/CD Pipelines</strong> (GitHub Actions, CircleCI) &amp; containerization</li>
+                            <li><strong>REST &amp; GraphQL APIs</strong> for versatile data exchange</li>
+                            <li><strong>Database Management</strong> (SQL, NoSQL, Firebase)</li>
+                            <li><strong>Security</strong> (JWT, OAuth) &amp; robust architecture</li>
+                            <li><strong>CI/CD Pipelines</strong> for smooth deployment workflows</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- Additional “Incredible” or “Highlight” section if desired -->
-            <section style="margin-top: 60px;">
-                <h2 class="section-title">What Makes Me Stand Out</h2>
-                <p class="section-description">
-                    <strong>Collaboration:</strong> We view every project as a partnership. Your vision, combined with our 
-                    expertise, leads to better results. <br>
-                    <strong>Adaptability:</strong> Whether you’re a startup or an established company, we tailor our solutions
-                    to fit your specific needs. <br>
-                    <strong>Transparency:</strong> From start to finish, we keep communication clear and open so you're always
-                    in the loop. <br>
-                    <strong>Quality Over Quantity:</strong> We prioritize creating high-quality, functional solutions over 
-                    delivering fast, subpar work. Each project is treated with attention to detail and passion. <br>
-                    <strong>Continuous Improvement:</strong> Technology evolves fast, and so do we. Our team stays updated 
-                    with the latest trends and best practices in the industry to provide top-notch services.
+
+            <!-- HIGHLIGHT / STANDOUT SECTION -->
+            <section class="standout-section">
+                <h2>What Makes Me Stand Out</h2>
+                <p>
+                    <strong>Collaboration:</strong> We view every project as a partnership. Your vision, combined with our
+                    expertise, leads to better results.<br>
+                    <strong>Adaptability:</strong> Whether you’re a startup or an established company, we tailor solutions
+                    to fit your needs.<br>
+                    <strong>Transparency:</strong> We keep communication open from start to finish, so you’re always
+                    in the loop.<br>
+                    <strong>Quality Over Quantity:</strong> We prioritize creating high-quality solutions over
+                    delivering fast, subpar work.<br>
+                    <strong>Continuous Improvement:</strong> Technology evolves quickly, and so do we. Our team stays
+                    updated with the latest trends and best practices.
                 </p>
             </section>
         </main>
+
+        <!-- OUR PROCESS -->
+        <section id="process" class="process-section">
+            <h2>Our Process</h2>
+            <p class="section-description">
+                At DevIgnite, we believe in a collaborative and iterative process that ensures the best possible outcome. Here’s how we work:
+            </p>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <h3>Discovery &amp; Ideation</h3>
+                    <p>
+                        We begin by understanding your business, your audience, and your goals. Through brainstorming and research, we align on a clear vision.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <h3>Design</h3>
+                    <p>
+                        We create intuitive, visually appealing interfaces. Using tools like Figma, we craft wireframes, prototypes, and high-fidelity designs that reflect your brand.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <h3>Development</h3>
+                    <p>
+                        Once the design is finalized, we build using the latest frameworks and best practices. Front-end and back-end are seamlessly integrated.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <h3>Testing</h3>
+                    <p>
+                        We conduct rigorous testing to ensure the product is bug-free and works perfectly across all devices and platforms.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <h3>Launch</h3>
+                    <p>
+                        After thorough validation, we deploy your product. We monitor its performance and make any necessary adjustments post-launch.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <h3>Continuous Improvement</h3>
+                    <p>
+                        Our work doesn’t end at launch. We gather feedback, iterate, and ensure your solution remains relevant and effective.
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <section id="process" style="margin-top: 60px;">
-        <h2 class="section-title">Our Process</h2>
-        <p class="section-description">
-            At DevIgnite, we believe in a collaborative and iterative process that ensures the best possible outcome for every project. Here’s how we work:
-        </p>
-        <div class="process-steps" style="display: flex; justify-content: center; gap: 40px; margin-top: 30px;">
-            <!-- Step 1 -->
-            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
-                <h3>Step 1: Discovery & Ideation</h3>
-                <p>
-                    We begin by understanding your business, your audience, and your goals. Through collaborative brainstorming sessions and research, we align on a clear vision for the project.
-                </p>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
-                <h3>Step 2: Design</h3>
-                <p>
-                    Our design process focuses on creating intuitive, visually appealing interfaces. We use Figma to develop wireframes, prototypes, and high-fidelity designs that align with your brand.
-                </p>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
-                <h3>Step 3: Development</h3>
-                <p>
-                    Once the design is finalized, we start coding using the latest frameworks and technologies. We ensure that both front-end and back-end components are seamlessly integrated.
-                </p>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
-                <h3>Step 4: Testing</h3>
-                <p>
-                    Quality is paramount. We conduct rigorous testing to ensure that the product is bug-free and functions perfectly across all devices and platforms.
-                </p>
-            </div>
-
-            <!-- Step 5 -->
-            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
-                <h3>Step 5: Launch</h3>
-                <p>
-                    After testing, we prepare for launch, ensuring everything is optimized and ready. We deploy the product and monitor its performance for any post-launch adjustments.
-                </p>
-            </div>
-
-            <!-- Step 6 -->
-            <div class="process-step" style="flex: 1; text-align: center; background-color: rgba(255,69,0,0.8); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
-                <h3>Step 6: Continuous Improvement</h3>
-                <p>
-                    Our work doesn’t stop at launch. We continue to gather feedback and iterate on the project to ensure it remains relevant and continues to meet your goals over time.
-                </p>
-            </div>
-        </div>
-    </section>
-
-
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2025 DevIgnite. All Rights Reserved.</p>
     </footer>
