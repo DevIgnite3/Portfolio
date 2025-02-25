@@ -1,0 +1,196 @@
+﻿@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <header>
+        <h2 class="section-title">My Projects</h2>
+        <p class="section-description">
+            Here are some of my notable projects, each with a brief overview, a demo video,
+            and the key skills I gained while developing them.
+        </p>
+    </header>
+
+    <div class="project-container">
+        <!-- Alleysway: ASP.NET Core Web Application -->
+        <div class="project-box">
+            <h3>
+                <a href="https://github.com/UndeadRonin99/Alleysway-website.git" style="color: #ffcc00;">
+                    Alleysway: ASP.NET Core Web Application
+                </a>
+            </h3>
+            <p>A robust ASP.NET Core MVC site integrating Firebase for multi-role functionality and real-time session bookings.</p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/OxSpskRw8iA"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <h4>What I Did</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>Implemented Google OAuth for secure login</li>
+                <li>Set up role-based access for admins and clients</li>
+                <li>Integrated real-time session management with Firebase</li>
+            </ul>
+
+            <h4>Skills Learned</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>ASP.NET Core MVC in-depth</li>
+                <li>Role-Based Access Control (RBAC)</li>
+                <li>Third-party service integration</li>
+            </ul>
+        </div>
+
+        <!-- Alleysway App -->
+        <div class="project-box">
+            <h3>
+                <a href="https://github.com/UndeadRonin99/Alleysway-App.git" style="color: #ffcc00;">
+                    Alleysway App
+                </a>
+            </h3>
+            <p>An Android fitness application for workout logging, weight tracking, and personal trainer bookings.</p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/OxSpskRw8iA"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <h4>What I Did</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>Developed the workout logging feature</li>
+                <li>Implemented Google Firebase Realtime DB</li>
+                <li>Created secure payment flow for booking sessions</li>
+            </ul>
+
+            <h4>Skills Learned</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>Android Development (Kotlin/Java)</li>
+                <li>Firebase Auth & Realtime Database</li>
+                <li>UI/UX design for mobile apps</li>
+            </ul>
+        </div>
+
+        <!-- Payment Portal: Full-Stack Application -->
+        <div class="project-box">
+            <h3>
+                <a href="https://github.com/UndeadRonin99/Payment-Portal.git" style="color: #ffcc00;">
+                    Payment Portal: Full-Stack App
+                </a>
+            </h3>
+            <p>A React + Express.js web app for user payments and verification, featuring JWT-based login and role management.</p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/clSogC3Acyc"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <h4>What I Did</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>Built secure login with JWT & bcrypt</li>
+                <li>Set up CI/CD pipelines via CircleCI</li>
+                <li>Implemented payment verification logic</li>
+            </ul>
+
+            <h4>Skills Learned</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>Full-stack React + Node.js</li>
+                <li>RESTful API design & authentication</li>
+                <li>Continuous Integration/Deployment (CI/CD)</li>
+            </ul>
+        </div>
+
+        <!-- Fusion API -->
+        <div class="project-box">
+            <h3>
+                <a href="https://github.com/UndeadRonin99/Fusion_API.git" style="color: #ffcc00;">
+                    Fusion API: Backend Service
+                </a>
+            </h3>
+            <p>Backend for meal planning and recipe management, featuring Firebase auth and dynamic grocery lists.</p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/j97t5qKFvp4"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <h4>What I Did</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>Developed RESTful endpoints for meal planning</li>
+                <li>Integrated third-party recipe APIs</li>
+                <li>Handled cloud deployment on Render.com</li>
+            </ul>
+
+            <h4>Skills Learned</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>API development & CRUD operations</li>
+                <li>Third-party API integration (Spoonacular/Nutritionix)</li>
+                <li>Cloud hosting & environment config</li>
+            </ul>
+        </div>
+
+        <!-- Fusion: Meal Planning App -->
+        <div class="project-box">
+            <h3>
+                <a href="https://github.com/UndeadRonin99/Fusion.git" style="color: #ffcc00;">
+                    Fusion: Meal Planning App
+                </a>
+            </h3>
+            <p>A comprehensive Android meal planner with recipe browsing, grocery auto-generation, and optional biometric login.</p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VplMxy9QUXQ"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <h4>What I Did</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>Implemented multi-language support (English/Afrikaans)</li>
+                <li>Connected to Firebase for user auth & data sync</li>
+                <li>Used Retrofit for dynamic recipe retrieval</li>
+            </ul>
+
+            <h4>Skills Learned</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>Android dev with Kotlin</li>
+                <li>Real-time data & authentication</li>
+                <li>Multi-language UI/UX design</li>
+            </ul>
+        </div>
+
+        <!-- ClockIT: Time Management System -->
+        <div class="project-box">
+            <h3>
+                <a href="https://github.com/UndeadRonin99/ClockIT.git" style="color: #ffcc00;">
+                    ClockIT: Time Management System
+                </a>
+            </h3>
+            <p>Advanced scheduling and time tracking system built with Java, Spring Boot, and MySQL.</p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/waPscszF9Eo"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <h4>What I Did</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>Designed time tracking & scheduling algorithms</li>
+                <li>Collaborated in a group with Git & agile methods</li>
+                <li>Created a user-friendly interface for tasks & deadlines</li>
+            </ul>
+
+            <h4>Skills Learned</h4>
+            <ul style="text-align:left; margin: 0 auto; display: inline-block;">
+                <li>Spring Boot & MySQL integration</li>
+                <li>Project management & collaboration (Agile)</li>
+                <li>UI design & productivity algorithms</li>
+            </ul>
+        </div>
+    </div>
+</div>
