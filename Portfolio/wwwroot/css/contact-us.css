@@ -65,10 +65,9 @@ body {
    (Optional big banner like on About Us)
 =================================== */
 .top-section {
-    background-image: url('/images/contact-us-background.jpg');
     margin-top: 6.25%;
     text-align: center;
-    padding: 5rem 2rem 3rem;
+    padding: 3.5rem 2rem 3rem;
     position: relative;
     background-size: cover;
     background-attachment: fixed;
@@ -87,7 +86,7 @@ body {
    Matching the style of about-us
 =================================== */
 .contact-container {
-    margin-top: 6.25%;
+    margin-top: 2.5%;
     display: flex;
     justify-content: center; /* Centers columns horizontally */
     align-items: flex-start; /* Top-align columns */
@@ -97,7 +96,7 @@ body {
 
 /* ===== Left Column with the Form ===== */
 .contact-form-section {
-    padding:2.5%;
+    padding:3.5%;
     flex: 1; /* Let columns share available space */
     max-width: 500px; /* Form doesn’t get too wide */
     margin-bottom: 2rem; /* Space at bottom for smaller screens */
