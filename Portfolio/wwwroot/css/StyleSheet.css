@@ -253,7 +253,7 @@ body {
 
 /* Extra spacing so content doesn't hide behind nav */
 main {
-    margin-top: 70px;
+    padding-top: calc(1rem); /* Adjust dynamically */
 }
 
 .glow-title {
@@ -312,6 +312,7 @@ header {
 =============================== */
 .fire-overlay {
     display: none; /* If you still want an overlay, enable this by removing display:none */
+    height: 100%;
 }
 
 .flame-container {
