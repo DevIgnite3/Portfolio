@@ -23,10 +23,10 @@ body {
     padding: 20px;
 }
 .glow-title {
-    font-size: 3rem;
+    font-size: 100px;
     text-align: center;
     color: #ff4500;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
     animation: glowPulse 3s infinite ease-in-out alternate;
     margin-bottom: 15px; /* Add space below the title */
@@ -86,7 +86,7 @@ body {
     #projects h2 {
         font-size: 2rem;
         color: #ffcc66;
-        text-transform: uppercase;
+        text-transform: capitalize;
         letter-spacing: 2px;
         margin-bottom: 20px;
     }
@@ -147,7 +147,7 @@ body {
     text-align: center;
     font-size: 1.5rem;
     color: #ffcc66;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin-bottom: 15px;
 }
 
@@ -412,29 +412,46 @@ header {
         font-size: 1.15rem;
     }
 
-/* Call to Action Buttons */
 .btn-container {
-    margin-top: 30px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px; /* Adds space between buttons */
+    margin-top: 20px; /* Ensures space above the buttons */
+    flex-wrap: wrap; /* Ensures buttons don't overflow */
 }
 
+/* Buttons Styling */
 .btn {
-    background-color: #ff4500;
-    color: #fff;
-    padding: 14px 28px;
+    display: inline-block;
+    padding: 12px 20px;
     font-size: 1rem;
     text-decoration: none;
     border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     transition: background-color 0.3s, transform 0.3s;
+    white-space: nowrap; /* Prevents text from wrapping inside buttons */
+    text-align: center;
 }
 
+    /* Hover Effect */
     .btn:hover {
         background-color: #ff6500;
-        transform: translateY(-2px);
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px rgba(255, 69, 0, 1);
     }
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .btn-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        gap: 10px; /* More space between stacked buttons */
+    }
+
+    .btn {
+        width: 90%; /* Ensure full-width buttons on small screens */
+        text-align: center;
+    }
+}
 
 /* ===============================
    Skills Showcase
@@ -785,7 +802,7 @@ footer {
 =============================== */
 
 .skill-card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #2f2f2f;
     padding: 25px;
     border-radius: 10px;
     width: 320px;
@@ -982,3 +999,107 @@ section {
     max-width: 1200px; /* Set a max-width for better alignment */
     margin: 0 auto; /* Center the container */
 }
+/* ===============================
+   🔥 Fire-Themed Navbar
+================================ */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.95); /* Dark theme */
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3); /* Fiery glow */
+    z-index: 1000;
+    padding: 15px 0;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff4500; /* Fire theme */
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+    /* Logo Hover Effect */
+    .logo:hover {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.5);
+    }
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+    .nav-links li {
+        display: inline-block;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ffcc99;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+        /* Hover Effect (Glowing Fire Effect) */
+        .nav-links a:hover {
+            background-color: rgba(255, 69, 0, 0.8);
+            box-shadow: 0 0 10px rgba(255, 69, 0, 1);
+            color: #fff;
+        }
+
+/* Mobile Navigation */
+.menu-toggle {
+    font-size: 2rem;
+    color: #ff4500;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(30, 30, 30, 0.95);
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+        .nav-links li {
+            padding: 10px 0;
+        }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Show menu when active */
+.nav-links.active {
+    display: flex;
+}
+

@@ -1,13 +1,18 @@
-﻿<!DOCTYPE html>
+﻿@{
+    // Single-page, no separate layout
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+  
+}
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
+    <title></title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Antonio' rel='stylesheet'>
-
 
     <style>
         body {
@@ -56,7 +61,6 @@
                 line-height: 1.6;
             }
 
-        <style >
         /* Form adjustments */
         #contactForm {
             background-color: #1d1d1d; /* Dark background to match Figma */

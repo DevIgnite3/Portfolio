@@ -1,6 +1,7 @@
 ﻿@{
     // Single-page, no separate layout
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
     ViewBag.Title = "DevIgnite";
 }
 
@@ -21,15 +22,6 @@
     <!-- (Optional) Fire-themed overlay, if your CSS uses it -->
     <div class="fire-overlay"></div>
 
-    <!-- NAVBAR -->
-    <nav class="navbar-normal">
-        <ul>
-            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-            <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
-            <li><a asp-controller="Home" asp-action="AboutUs">About Us</a></li>
-            <li><a asp-controller="Home" asp-action="Privacy">Privacy</a></li>
-        </ul>
-    </nav>
 
     <div class="container">
         <!-- HEADER / HERO AREA -->
@@ -177,7 +169,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 DevIgnite. All Rights Reserved.</p>
+        <p>&copy; 2025 DevIgnite.</p>
     </footer>
 </body>
 </html>
