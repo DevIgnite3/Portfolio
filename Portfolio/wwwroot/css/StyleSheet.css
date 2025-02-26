@@ -36,7 +36,7 @@ body {
     font-size: 1.2rem;
     color: #ffedcc;
     max-width: 800px;
-    margin: 0 auto 30px;
+    margin: 0 auto 10px;
     text-align: center;
     line-height: 1.6;
 }
@@ -553,7 +553,7 @@ header {
         font-size: 1.2rem;
         color: #ffedcc;
         max-width: 800px;
-        margin: 0 auto 30px;
+        margin: 0 auto 10px;
         text-align: center;
         line-height: 1.6;
     }
@@ -793,8 +793,8 @@ footer {
 }
 
 #projects {
-    margin-top: 20px; /* Ensure it clears the fixed navbar */
-    padding-top: 10px; /* Extra space for better positioning */
+    margin-top: 0px; /* Ensure it clears the fixed navbar */
+    padding-top: 20px; /* Extra space for better positioning */
 }
 
 
