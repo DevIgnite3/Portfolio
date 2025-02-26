@@ -21,14 +21,20 @@
     <div class="fire-overlay"></div>
 
     <!-- Normal, always-visible NAVBAR -->
-    <nav class="navbar-normal">
-        <ul>
-            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-            <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
-            <li><a asp-controller="Home" asp-action="AboutUs">About Us</a></li>
-            <li><a asp-controller="Home" asp-action="Privacy">Privacy</a></li>
-        </ul>
+    <!-- Fire-Themed Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a asp-controller="Home" asp-action="Index" class="logo">DevIgnite</a>
+            <ul class="nav-links">
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+                <li><a asp-controller="Home" asp-action="AboutUs">About Us</a></li>
+                <li><a asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        </div>
     </nav>
+
 
     <!-- Child view content goes here -->
     <main>
@@ -39,3 +45,8 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    }
+</script>
