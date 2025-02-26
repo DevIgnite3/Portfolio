@@ -1,0 +1,106 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Contact Us";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/css/contact-us.css" rel="stylesheet"/>
+    
+</head>
+<body>
+
+    <!-- TOP SECTION / BANNER -->
+    <div class="top-section">
+        <h1>Contact Us</h1>
+        <h2>Make a change for the better</h2>
+    </div>
+
+    <!-- TWO-COLUMN CONTACT LAYOUT -->
+    <div class="contact-container">
+
+        <!-- LEFT COLUMN: FORM -->
+        <div class="contact-form-section">
+            <form id="contactForm">
+                <!-- Two Inputs in a row (just manually use inline-block or split them) -->
+                <div style="display:flex; gap:1rem;">
+                    <input type="text"
+                           class="form-control"
+                           id="firstName"
+                           name="firstName"
+                           placeholder="First Name*"
+                           required />
+                    <input type="text"
+                           class="form-control"
+                           id="lastName"
+                           name="lastName"
+                           placeholder="Last Name*"
+                           required />
+                </div>
+
+                <input type="email"
+                       class="form-control"
+                       id="email"
+                       name="email"
+                       placeholder="Email*"
+                       required />
+
+                <input type="tel"
+                       class="form-control"
+                       id="phone"
+                       name="phone"
+                       placeholder="Phone Number*"
+                       required />
+
+                <textarea class="form-control"
+                          id="message"
+                          name="message"
+                          rows="4"
+                          placeholder="Your message..."
+                          required></textarea>
+
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+
+        <!-- RIGHT COLUMN: INFO -->
+        <div class="contact-info-section">
+            <h3 class="title">Call Us, Write Us, or Knock on our door</h3>
+            <p class="subtitle">We’d Love for you to join the</p>
+            <p class="subtitle-bold">Alleysway family</p>
+            <p class="description">
+                Looking to compete professionally? Want a personal trainer? Just looking
+                to improve your fitness? Join Alleysway today. It’s the only way.
+            </p>
+            <ul class="timings">
+                <li>Monday - Thursday: 5AM - 8PM</li>
+                <li>Friday: 5AM - 7PM</li>
+                <li>Saturday: 7AM - 12PM</li>
+                <li>Sunday: Closed</li>
+                <li>Public Holidays: 7AM - 12PM</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- EMAILJS SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/@@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            emailjs.init("9cvP5Kb4utHZF9F5f");
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('service_6mitp6f', 'template_gflpa2k', this)
+                    .then(function (response) {
+                        alert('SUCCESS! Your message has been sent.');
+                    }, function (error) {
+                        alert('FAILED... Please try again.');
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
