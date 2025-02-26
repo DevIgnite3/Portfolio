@@ -1,0 +1,1105 @@
+﻿/* ===============================
+   🔥 Global Styles
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   🔥 Body & Background
+================================ */
+body {
+    font-family: Arial, sans-serif;
+    background: #1c1c1c; /* Dark background for good contrast */
+    color: #fff; /* Default text color */
+}
+
+/* Container for content layout */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.glow-title {
+    font-size: 100px;
+    text-align: center;
+    color: #ff4500;
+    text-transform: capitalize;
+    text-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
+    animation: glowPulse 3s infinite ease-in-out alternate;
+    margin-bottom: 15px; /* Add space below the title */
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #ffedcc;
+    max-width: 800px;
+    margin: 0 auto 10px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+
+    50% {
+        text-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 0, 0, 0.8);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+}
+
+
+
+
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+
+    50% {
+        text-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 0, 0, 0.8);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+}
+
+/* ===============================
+   🔥 Project Section Background
+================================ */
+#projects {
+    background: #1c1c1c; /* Matching fiery background */
+    
+    text-align: center;
+}
+
+    #projects h2 {
+        font-size: 2rem;
+        color: #ffcc66;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    #projects p {
+        max-width: 800px;
+        margin: 0 auto 30px;
+        color: #ffedcc;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+
+/* ===============================
+   🔥 Project Cards Styling
+================================ */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/*.project-card {
+    background: rgba(255, 69, 0, 0.1);  Fiery transparent card 
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+    .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 69, 0, 1);
+    }*/
+
+/* ===============================
+   🔥 Project Video Styling
+================================ */
+.video-container {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .video-container iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+/* ===============================
+   🔥 Project Titles & Links
+================================ */
+.project-card h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffcc66;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    .project-card a:hover {
+        color: #ff9933;
+    }
+
+/* ===============================
+   🔥 Lists (What We Did & Skills)
+================================ */
+.project-card h4 {
+    color: #ffcc66;
+    margin-top: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.project-card ul {
+    list-style: none;
+    padding-left: 0;
+    color: #ffdab3;
+}
+
+.project-card li {
+    padding: 5px 0;
+    border-left: 3px solid #ff4500;
+    padding-left: 10px;
+}
+
+/* ===============================
+   🔥 Buttons
+================================ */
+.btn {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn:hover {
+        background-color: #ff6500;
+        box-shadow: 0 0 15px rgba(255, 69, 0, 1);
+    }
+
+/* ===============================
+   🔥 Responsive Adjustments
+================================ */
+@media (max-width: 768px) {
+    .project-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    .glow-title {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* ===============================
+   Body & Main Page Background
+=============================== */
+body {
+    font-family: Arial, sans-serif;
+    background: #1c1c1c; /* Dark background for good contrast */
+    color: #fff; /* Default text color */
+}
+
+/* Container for consistent max-width */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ===============================
+   Navbar
+=============================== */
+.navbar-normal {
+    position: fixed; /* Stays on top as you scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    z-index: 999; /* Ensure navbar stays above other elements */
+}
+
+    .navbar-normal ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 15px 0;
+        margin: 0;
+    }
+
+    .navbar-normal a {
+        color: #ffcc99;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+        .navbar-normal a:hover {
+            background-color: #ff4500;
+            color: #fff;
+        }
+
+/* Extra spacing so content doesn't hide behind nav */
+main {
+    padding-top: calc(1rem); /* Adjust dynamically */
+}
+
+
+
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+
+    50% {
+        text-shadow: 0 0 25px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 69, 0, 0.4);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+}
+
+
+
+/* ===============================
+   Header & Hero Section
+=============================== */
+header {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+    header h1 {
+        font-size: 4rem;
+        color: #ff4500;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 1.4rem;
+        color: #ffdab3;
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6), /* First shadow */
+        0 0 20px rgba(255, 69, 0, 0.4); /* Second shadow */
+    }
+
+
+/* ===============================
+   Flame Animation
+=============================== */
+.fire-overlay {
+    display: none; /* If you still want an overlay, enable this by removing display:none */
+    height: 100%;
+}
+
+.flame-container {
+    display: flex;
+    justify-content: center;
+   
+    margin-bottom: -60px; /* Move content up */
+
+    position: relative;
+    z-index: 2;
+}
+
+.flame {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: -30px; /* Adjust the position */
+}
+
+.flame-effect {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ff4500 40%, rgba(255, 140, 0, 0.6));
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: flicker 1.5s infinite ease-in-out alternate;
+    opacity: 0.9;
+}
+
+    .flame-effect:nth-child(2) {
+        width: 80px;
+        height: 80px;
+        animation-duration: 1.8s;
+        opacity: 0.7;
+    }
+
+    .flame-effect:nth-child(3) {
+        width: 100px;
+        height: 100px;
+        animation-duration: 2s;
+        opacity: 0.6;
+        filter: blur(2px);
+    }
+
+@keyframes flicker {
+    0% {
+        transform: translate(-50%, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, -10px) scale(1.1);
+    }
+}
+
+/* ===============================
+   Intro Section
+=============================== */
+.content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+    .content h2 {
+        font-size: 2.5rem;
+        color: #ffcc66;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .content p {
+        color: #ffd9b3;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.15rem;
+    }
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Adds space between buttons */
+    margin-top: 20px; /* Ensures space above the buttons */
+    flex-wrap: wrap; /* Ensures buttons don't overflow */
+}
+
+/* Buttons Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    white-space: nowrap; /* Prevents text from wrapping inside buttons */
+    text-align: center;
+}
+
+    /* Hover Effect */
+    .btn:hover {
+        background-color: #ff6500;
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px rgba(255, 69, 0, 1);
+    }
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .btn-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        gap: 10px; /* More space between stacked buttons */
+    }
+
+    .btn {
+        width: 90%; /* Ensure full-width buttons on small screens */
+        text-align: center;
+    }
+}
+
+/* ===============================
+   Skills Showcase
+=============================== */
+#skills-showcase {
+    background: linear-gradient(180deg, #ff4500, #b30000);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+    #skills-showcase h2 {
+        font-size: 2.2rem;
+        color: #fff;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    #skills-showcase p {
+        max-width: 900px;
+        margin: 0 auto;
+        color: #ffe6cc;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+
+/* Card Container */
+.skill-boxes, .project-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Skill & Project Cards */
+.skill-card, .project-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+    .skill-card:hover, .project-box:hover {
+        transform: translateY(-5px);
+    }
+
+    .skill-card h3, .project-box h3 {
+        color: #ffe6cc;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .skill-card p, .project-box p {
+        color: #ffe6cc;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    /* Lists Inside Cards */
+    .skill-card ul, .project-box ul {
+        list-style-type: none;
+        padding-left: 0;
+        color: #ffefd5;
+    }
+
+    .skill-card li, .project-box li {
+        margin-bottom: 8px;
+    }
+
+/* ===============================
+   Standout Section
+=============================== */
+.standout-section {
+    background: linear-gradient(180deg, #b30000 0%, #891414 50%, #1c1c1c 100%);
+    margin-bottom: -40px; /* Pulls next section up */
+    border-radius: 40px 40px 0 0; /* Only rounds the top */
+    position: relative;
+    z-index: 2;
+    padding-bottom: 80px; /* Ensures the gradient extends further */
+    text-align: center;
+}
+
+    .standout-section h2 {
+        color: #ffcc66;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .standout-section p {
+        color: #ffc;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+/* ===============================
+   Our Process
+=============================== */
+.process-section {
+    background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #1c1c1c 20%, #2f2f2f 100%);
+    margin-top: -40px; /* Pulls into previous section */
+    border-radius: 0 0 40px 40px; /* Only rounds the bottom */
+    position: relative;
+    z-index: 1;
+    padding-top: 80px; /* Ensures gradient extends higher */
+}
+
+    .process-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #ffcc66;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .process-section p.section-description {
+        font-size: 1.2rem;
+        color: #ffedcc;
+        max-width: 800px;
+        margin: 0 auto 10px;
+        text-align: center;
+        line-height: 1.6;
+    }
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 20px; /* Ensure consistent spacing */
+}
+
+
+.process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.process-step {
+    flex: 1 1 200px;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle background */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 0 rgba(255, 69, 0, 0); /* No shadow initially */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-align: center;
+    position: relative;
+    color: #fff; /* Ensures text remains unaffected */
+}
+
+    /* 🔥 Outer Glow Effect on Hover */
+    .process-step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.6);
+    }
+
+/* 🔥 Continuous Pulsing Glow */
+@keyframes outerGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 0, 0, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+}
+
+/* 🔥 Apply the pulsing glow animation only around the box */
+.process-step:hover {
+    animation: outerGlow 2s infinite ease-in-out alternate;
+}
+
+/* 🔥 Keep text normal (no glow) */
+.process-step h3,
+.process-step p {
+    text-shadow: none !important; /* Ensures no glow on text */
+}
+
+
+
+
+/* ===============================
+   Projects Section
+=============================== */
+#projects {
+   
+    background: #1c1c1c;
+    color: #fff;
+    text-align: center;
+}
+
+    #projects h2 {
+        font-size: 2rem;
+        color: #ffcc66;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    #projects p {
+        max-width: 800px;
+        margin: 0 auto 30px;
+        color: #ffedcc;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: #ffcc66;
+    }
+
+    .project-card p {
+        color: #fff;
+        line-height: 1.6;
+    }
+
+/* ===============================
+   Footer
+=============================== */
+footer {
+    background-color: #121212;
+    text-align: center;
+    color: #ffdab3;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+    footer p {
+        margin: 5px 0;
+        font-size: 0.95rem;
+    }
+
+/* ===============================
+   Responsive Adjustments
+=============================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .skill-boxes, .project-gallery, .process-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card, .project-box, .project-card, .process-step {
+        width: 80% !important;
+        max-width: 500px;
+    }
+
+    #skills-showcase h2,
+    #projects h2,
+    .process-section h2,
+    .standout-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .navbar-normal ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* ===============================
+   FIRE EFFECTS & GLOW
+=============================== */
+
+
+
+
+
+.flame-text {
+    font-size: 1.4rem;
+    color: #ffdab3;
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.6), 0 0 20px rgba(255, 69, 0, 0.4);
+}
+
+/* ===============================
+   BUTTONS & INTERACTIONS
+=============================== */
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.fire-btn {
+    background-color: #ff4500;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+    .fire-btn:hover {
+        background-color: #ff6500;
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(255, 69, 0, 1);
+    }
+
+/* ===============================
+   SKILLS CARDS (HOVER EFFECT)
+=============================== */
+
+.skill-card {
+    background-color: #2f2f2f;
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+}
+
+    .skill-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 69, 0, 1);
+    }
+
+/* ===============================
+   🔥 Glowing About Us Title
+================================ */
+.section-title {
+    font-size: 3rem;
+    text-align: center;
+    color: #ff4500; /* Fiery orange-red */
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
+    animation: glowPulse 3s infinite ease-in-out alternate;
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+
+    50% {
+        text-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 0, 0, 0.8);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+}
+
+#projects {
+    margin-top: 0px; /* Ensure it clears the fixed navbar */
+    padding-top: 20px; /* Extra space for better positioning */
+}
+section {
+    border-radius: 40px; /* Adjust for more/less roundness */
+    overflow: hidden; /* Ensures gradient background stays within bounds */
+    margin: 40px auto; /* Adds spacing between sections */
+    padding: 60px 20px; /* Maintain spacing inside */
+    width: 90%; /* Keeps sections within viewport */
+    max-width: 1200px; /* Prevents extra-wide layouts */
+}
+
+/* 3D Flip Card Setup */
+.project-card {
+    perspective: 1000px; /* Needed for the 3D effect */
+    position: relative;
+    flex: 1 1 calc(33.333% - 30px); /* Ensure 3 cards per row */
+    max-width: calc(33.333% - 30px); /* Prevents cards from exceeding a third of the width */
+    min-width: 300px; /* Prevents shrinking too much */
+    margin: 0px auto; /* Keeps spacing even */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    background: transparent;
+    overflow: visible; /* Keeps the flip card effect */
+}
+
+/*REsponsive adjustments for smaller screens*/
+@media (max-width: 1024px) {
+    .project-card {
+        flex: 1 1 calc(50% - 30px); /* 2 per row on medium screens */
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 100%; /* 1 per row on mobile */
+        max-width: 100%;
+    }
+}
+
+
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 480px; /* Adjust to fit your text */
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+/* On hover, flip 180 deg around the Y-axis */
+.project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Both front and back occupy the same space, absolutely stacked */
+.project-front, .project-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the “back” when front is facing */
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Flip Card Front */
+.project-front {
+    background: linear-gradient(135deg, #2a2a2a 0%, #3f3f3f 100%);
+    z-index: 2;
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center horizontally */
+    height: 100%; /* Ensure it takes full height */
+    padding: 20px; /* Keep some padding */
+    text-align: center; /* Center text */
+}
+
+    /* Ensure the text content inside is centered */
+    .project-front .project-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center text horizontally */
+        justify-content: center; /* Center text vertically */
+        height: 100%; /* Ensure it fills parent */
+        width: 100%; /* Ensure full width */
+    }
+
+/* Back side flips around */
+.project-back {
+    background: linear-gradient(135deg, #4a0600, #7f0e00); /* fiery gradient for variety */
+    transform: rotateY(180deg);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Fine-tuning for front content */
+.project-front .project-info h3 {
+    font-size: 1.8rem;
+    color: #ffcc66;
+    margin-bottom: 5px;
+}
+
+.project-front .project-info h4 {
+    font-size: 1.1rem;
+    color: #ff9955;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+}
+
+/* On the back, let’s format text for readability */
+.project-back p {
+    color: #ffe6d0;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.project-back .project-links {
+    margin-top: 10px;
+    text-align: center; /* Center the buttons at the bottom */
+}
+
+    /* Keep the links consistent with your fiery style */
+    .project-back .project-links a {
+        display: inline-block;
+        margin: 5px 5px 0 5px;
+        padding: 8px 14px;
+        border-radius: 20px;
+        background-color: #ff4500;
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+    }
+
+        .project-back .project-links a:hover {
+            background-color: #ff6a00;
+        }
+
+.project-cards {
+    display: flex; /* Activate flexbox */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 30px; /* Space between cards */
+    justify-content: center; /* Center the row */
+    align-items: flex-start; /* Align the cards to the top */
+    max-width: 1200px; /* Set a max-width for better alignment */
+    margin: 0 auto; /* Center the container */
+}
+/* ===============================
+   🔥 Fire-Themed Navbar
+================================ */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.95); /* Dark theme */
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3); /* Fiery glow */
+    z-index: 1000;
+    padding: 15px 0;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff4500; /* Fire theme */
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+    /* Logo Hover Effect */
+    .logo:hover {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.5);
+    }
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+    .nav-links li {
+        display: inline-block;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ffcc99;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+        /* Hover Effect (Glowing Fire Effect) */
+        .nav-links a:hover {
+            background-color: rgba(255, 69, 0, 0.8);
+            box-shadow: 0 0 10px rgba(255, 69, 0, 1);
+            color: #fff;
+        }
+
+/* Mobile Navigation */
+.menu-toggle {
+    font-size: 2rem;
+    color: #ff4500;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(30, 30, 30, 0.95);
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+        .nav-links li {
+            padding: 10px 0;
+        }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Show menu when active */
+.nav-links.active {
+    display: flex;
+}
+

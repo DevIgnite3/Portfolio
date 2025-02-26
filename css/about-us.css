@@ -1,0 +1,159 @@
+﻿/* 3D Flip Card up */
+.profile-card {
+    perspective: 1000px; /* Needed for the 3D effect */
+    position: relative;
+    width: 350px;
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    background: transparent;
+    overflow: visible; /* We want the flipping container to be seen */
+}
+
+.profile-card-inner {
+    position: relative;
+    width: 100%;
+    height: 480px; /* Adjust to fit your text */
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+/* On hover, flip 180 deg around the Y-axis */
+.profile-card:hover .profile-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Both front and back occupy the same space, absolutely stacked */
+.profile-front, .profile-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the “back” when front is facing */
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Front side: keep your gradient, text, image */
+.profile-front {
+    background: linear-gradient(135deg, #2a2a2a 0%, #3f3f3f 100%);
+    z-index: 2;
+}
+
+/* Back side flips around */
+.profile-back {
+    background: linear-gradient(135deg, #4a0600, #7f0e00); /* fiery gradient for variety */
+    transform: rotateY(180deg);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Fine-tuning for front content */
+.profile-front .profile-info h3 {
+    font-size: 1.8rem;
+    color: #ffcc66;
+    margin-bottom: 5px;
+}
+
+.profile-front .profile-info h4 {
+    font-size: 1.1rem;
+    color: #ff9955;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* On the back, let’s format text for readability */
+.profile-back p {
+    color: #ffe6d0;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.profile-back .profile-links {
+    margin-top: 10px;
+    text-align: center; /* Center the buttons at the bottom */
+}
+
+    /* Keep the links consistent with your fiery style */
+    .profile-back .profile-links a {
+        display: inline-block;
+        margin: 5px 5px 0 5px;
+        padding: 8px 14px;
+        border-radius: 20px;
+        background-color: #ff4500;
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+    }
+
+        .profile-back .profile-links a:hover {
+            background-color: #ff6a00;
+        }
+
+/* Make sure images remain circular and nice */
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Responsive tweak if flipping gets cut off on smaller screens */
+@media (max-width: 768px) {
+    .profile-card-inner {
+        height: 600px; /* More height if your text wraps significantly */
+    }
+}
+
+#about-us {
+    position: relative;
+    background: #1c1c1c;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 69, 0, 0.2), transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+    animation: overlayPulse 5s infinite alternate;
+}
+
+@keyframes overlayPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.3);
+        opacity: 0.3;
+    }
+}
+
+#about-us .container {
+    position: relative;
+    z-index: 2;
+}
+
+.team-profiles {
+    display: flex; /* Activate flexbox */
+    flex-wrap: wrap; /* Cards wrap if screen is narrow */
+    gap: 30px; /* Space between cards */
+    justify-content: center; /* Center them horizontally */
+    align-items: flex-start; /* Top-align the cards */
+}

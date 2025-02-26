@@ -1,0 +1,362 @@
+﻿/* ===================================
+   🔥 Global & Reset
+=================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Antonio, sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+/* ===================================
+   🔥 Contact Section Container
+   Similar to #about-us
+=================================== */
+#contact-us {
+    position: relative;
+    background: #1c1c1c;
+    width: 100%;
+    min-height: 100vh; /* So it spans the full screen */
+    overflow: hidden; /* For the overlay effect */
+}
+
+/* Radial overlay, matching about-us style */
+.contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 69, 0, 0.2), transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+    animation: overlayPulse 5s infinite alternate;
+}
+
+/* Reuse the same pulse effect keyframes from about-us */
+@keyframes overlayPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.3);
+        opacity: 0.3;
+    }
+}
+
+/* Container to hold the content above the overlay */
+#contact-us .container {
+    position: relative;
+    z-index: 2; /* Ensure content sits on top of overlay */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* ===================================
+   🔥 Top Banner Section
+   (Optional big banner like on About Us)
+=================================== */
+.top-section {
+    margin-top: 6.25%;
+    text-align: center;
+    padding: 3.5rem 2rem 3rem;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+    .top-section h1 {
+        font-size: 5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: Anton, sans-serif;
+        margin-bottom: 0.5rem;
+    }
+
+/* ===================================
+   🔥 Two-Column Layout
+   Matching the style of about-us
+=================================== */
+.contact-container {
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center; /* Centers columns horizontally */
+    align-items: flex-start; /* Top-align columns */
+    gap: 2rem; /* Space between columns */
+    flex-wrap: wrap; /* Wrap columns on smaller screens */
+}
+
+/* ===== Left Column with the Form ===== */
+.contact-form-section {
+    padding:3.5%;
+    flex: 1; /* Let columns share available space */
+    max-width: 500px; /* Form doesn’t get too wide */
+    margin-bottom: 2rem; /* Space at bottom for smaller screens */
+}
+
+#contactForm {
+    background-color: #1d1d1d;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    background-color: #222; /* Darker input fields to match about-us vibe */
+    color: #fff;
+    border: none;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 5px;
+}
+
+    .form-control:focus {
+        background-color: #444;
+        color: #fff;
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(255, 102, 0, 0.25);
+    }
+
+.btn-primary {
+    background-color: #FF6600;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #B94A00;
+    }
+
+/* ===== Right Column with Text ===== */
+.contact-info-section {
+    padding: 3.5%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px; /* Keep columns balanced */
+    margin-bottom: 2rem; /* For smaller screens */
+}
+
+    .contact-info-section .title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: #FC670B;
+        margin-bottom: 0.5rem;
+    }
+
+.subtitle {
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: #f5f5f5;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle-bold {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1rem;
+    color: #f5f5f5;
+    margin-bottom: 1rem;
+}
+
+.timings {
+    list-style-type: disc;
+    padding-left: 1.3rem;
+    color: #f5f5f5;
+}
+
+    .timings li {
+        margin-bottom: 0.5rem;
+    }
+
+/* ===================================
+   🔥 Responsive Media Queries
+=================================== */
+@media (max-width: 768px) {
+    .top-section h1 {
+        font-size: 3rem;
+    }
+
+    .top-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form-section,
+    .contact-info-section {
+        max-width: 600px;
+        flex: unset; /* Let them stack fully */
+    }
+}
+
+/* 🔥 CONTACT SECTION WRAPPER */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+}
+
+/* 🔥 FORM CONTAINER */
+.contact-form-container {
+    background-color: #1b1b1b;
+    border: 2px solid #FF6600;
+    padding: 60px;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-title {
+    color: #FF6600;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.input-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+    .form-control:focus {
+        background-color: #444;
+        color: #fff;
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(255, 102, 0, 0.25);
+    }
+
+/* 🔥 BUTTON */
+.btn-primary {
+    background-color: #FF6600;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #B94A00;
+    }
+
+/* 🔥 INFO CONTAINER */
+.contact-info-container {
+    background-color: #1b1b1b;
+    border: 2px solid #FF6600;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #FC670B;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.info-box {
+    background-color: #1d1d1d;
+    border-left: 5px solid #FF6600;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
+}
+
+    .info-box h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #FF6600;
+        margin-bottom: 5px;
+    }
+
+    .info-box p {
+        font-size: 1rem;
+        color: #f5f5f5;
+        margin: 0;
+    }
+
+.timings {
+    list-style: none;
+    padding: 0;
+}
+
+    .timings li {
+        font-size: 1rem;
+        color: #f5f5f5;
+        padding-left: 20px;
+        position: relative;
+    }
+
+        .timings li::before {
+            content: "•";
+            color: #FF6600;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form-container, .contact-info-container {
+        max-width: 100%;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,142 @@
+﻿/* Projects Section Container */
+#projects {
+    background: #1c1c1c; /* Dark background for contrast */
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+    #projects .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Section Title & Description */
+    #projects .section-title {
+        font-size: 2.2rem;
+        color: #ffcc66;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        text-shadow: 0 0 10px rgba(255, 68, 0, 1)
+    }
+
+    #projects .section-description {
+        max-width: 800px;
+        margin: 0 auto 40px;
+        color: #ffedcc;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+#no-glow-heading {
+    text-shadow: none;
+    transition: none;
+}
+
+/* Project Gallery Layout */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between cards */
+    justify-content: center; /* Center the cards */
+}
+
+/* Individual Project Card */
+.project-card {
+    background: linear-gradient(135deg, #2a2a2a 0%, #3f3f3f 100%);
+    width: 320px; /* Card width */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    overflow: hidden; /* If content extends, hide it nicely */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+    /* On Hover: Lift the Card */
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    /* Card Title */
+    .project-card h3 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #ffcc66; /* Title color, consistent with theme */
+        letter-spacing: 1px;
+    }
+
+    /* Project Description Paragraph */
+    .project-card p {
+        margin-bottom: 15px;
+        color: #e2e2e2;
+        line-height: 1.5;
+    }
+
+/* Video Container: Responsive Iframe */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 15px; /* Space below video */
+}
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: 5px; /* Slight rounding to match card style */
+    }
+
+/* Subheadings within Card (e.g., "What We Did", "Skills Learned") */
+.project-card h4 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #ffcc66;
+    letter-spacing: 0.5px;
+}
+
+/* Unordered Lists Within the Card */
+.project-card ul {
+    list-style-type: disc; /* Use discs instead of default bullet */
+    margin-left: 1.3rem; /* Indent bullets a bit */
+    margin-bottom: 15px; /* Space below list */
+    color: #fff;
+}
+
+/* Hyperlinks in Project Titles */
+.project-card h3 a {
+    color: #fc2828; /* Base text color */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Allows text-shadow to wrap nicely */
+    text-shadow: 0 0 5px rgba(255, 68, 0, 0.6);
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+    .project-card h3 a:hover {
+        /* Hover style with purple glow */
+        color: #fc2828; /* MediumVioletRed as an example */
+        text-shadow: 0 0 10px rgba(255, 68, 0, 1), 0 0 25px rgba(255, 100, 43, 0.5);
+    }
+
+/* =========== RESPONSIVE BREAKPOINTS =========== */
+@media (max-width: 768px) {
+    .project-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
