@@ -1,88 +1,10 @@
-﻿/* ===============================
-   🔥 Contact Us Page Styles
-================================ */
-/*body {
-    font-family: Antonio, sans-serif;
-    background: #1c1c1c;
-    color: #fff;
+﻿
+/* ===== RESET OR GLOBAL STYLES ===== */
+* {
     margin: 0;
     padding: 0;
-}*/
-
-/* Centered Contact Form */
-/*.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    padding: 2rem;
-}*/
-
-/* Contact Form Styling */
-/*#contactForm {
-    background: linear-gradient(135deg, #2a2a2a 0%, #3f3f3f 100%);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-}*/
-
-/* Contact Title */
-/*.contact-title {
-    font-size: 2rem;
-    color: #ffcc66;
-    text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
-    margin-bottom: 20px;
-}*/
-
-/* Form Input Fields */
-/*.form-control {
-    background-color: white;
-    color: black;
-    border: none;
-    margin-bottom: 1rem;
-    padding: 12px;
-    border-radius: 5px;
-}*/
-
-/* Form Input Focus Effect */
-/*.form-control:focus {
-    background-color: #444;
-    color: white;
-    outline: none;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
-}*/
-
-/* Submit Button */
-/*.btn-primary {
-    background-color: #ff4500;
-    border: none;
-    padding: 12px;
-    font-weight: bold;
-    width: 100%;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: all 0.3s ease-in-out;
-}*/
-
-/* Submit Button Hover Effect */
-/*.btn-primary:hover {
-    background-color: #ff6500;
-    box-shadow: 0 0 15px rgba(255, 69, 0, 1);
-}*/
-
-/* Responsive Adjustments */
-/*@media (max-width: 768px) {
-    .contact-container {
-        height: auto;
-        padding: 50px 20px;
-    }
+    box-sizing: border-box;
 }
-
 
 body {
     background-color: #121212;
@@ -90,66 +12,71 @@ body {
     font-family: Antonio, sans-serif;
 }
 
+/* ===== TOP SECTION (Banner) ===== */
 .top-section {
-    position: relative;
-    padding: 5rem 2rem;
-    color: #f5f5f5;
+    /* Remove width:100vw / transformX if you don’t need them */
+    width: 100%;
     background-size: cover;
     background-attachment: fixed;
-    width: 100vw;*/ /* Ensure it spans the entire viewport width */
-    /*margin: 0;*/ /* Remove any margin that might create gaps */
-    /*left: 50%;
-    transform: translateX(-50%);*/ /* Center the section */
-/*}
-
-    .top-section .content {
-        position: relative;
-        z-index: 2;
-        padding: 3rem 2rem;
-    }
+    text-align: center;
+    padding: 5rem 2rem 3rem;
+    position: relative;
+}
 
     .top-section h1 {
         font-size: 5rem;
         font-weight: bold;
         text-transform: uppercase;
         font-family: Anton, sans-serif;
+        margin-bottom: 0.5rem;
     }
 
-    .top-section h3 {
+    .top-section h2 {
         font-size: 2rem;
-        font-weight: bold;
+        color: #f5f5f5;
+        margin-bottom: 1rem;
     }
 
-    .top-section h4 {
-        font-size: 1.75rem;
-        font-weight: bold;
-    }
+/* ===== TWO-COLUMN LAYOUT ===== */
+.contact-container {
+    display: flex;
+    justify-content: center; /* centers columns horizontally */
+    align-items: flex-start; /* top-align columns */
+    gap: 2rem; /* space between columns */
+    max-width: 1200px; /* optional: container max width */
+    margin: 0 auto; /* center container in page */
+    padding: 2rem 1rem; /* space around container */
+}
 
-    .top-section p.lead {
-        font-size: 1.2rem;
-        line-height: 1.6;
-    }*/
+/* Left Column with the Form */
+.contact-form-section {
+    flex: 1; /* columns grow/shrink equally */
+    max-width: 500px; /* form doesn’t get too wide */
+}
 
-/* Form adjustments */
 #contactForm {
-    background-color: #1d1d1d; /* Dark background to match Figma */
+    background-color: #1d1d1d;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .form-control {
-    background-color: white /* Darker input fields */
-    color: white;
+    display: block;
+    width: 100%;
+    background-color: #222; /* Darker input fields */
+    color: #fff;
     border: none;
     margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 5px;
 }
 
     .form-control:focus {
         background-color: #444;
-        color: white;
+        color: #fff;
         outline: none;
-        box-shadow: 0 0 0 0.2rem rgba(255, 102, 0, 0.25); /* Light orange border on focus */
+        box-shadow: 0 0 0 0.2rem rgba(255, 102, 0, 0.25);
     }
 
 .btn-primary {
@@ -157,86 +84,80 @@ body {
     border: none;
     padding: 0.75rem 1.5rem;
     font-weight: bold;
+    text-transform: uppercase;
     width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
     .btn-primary:hover {
         background-color: #B94A00;
     }
 
-.title {
-    font-size: 1.75rem; /* Increase size for title */
-    font-weight: bold;
+/* Right Column with Text */
+.contact-info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+    .contact-info-section .title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: #FC670B;
+        margin-bottom: 0.5rem;
+    }
+
 .subtitle {
-    font-size: 1.25rem; /* Increase size for subtitles */
+    font-size: 1.25rem;
     font-weight: normal;
     color: #f5f5f5;
+    margin-bottom: 0.5rem;
 }
 
 .subtitle-bold {
     font-size: 1.5rem;
     font-weight: bold;
     color: #f5f5f5;
-    margin-top: -10px; /* Align closer to the subtitle above */
+    margin-bottom: 1rem;
 }
 
 .description {
     font-size: 1rem;
     color: #f5f5f5;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 
 .timings {
-    list-style-type: disc; /* Adds bullet points */
-    padding-left: 1rem;
-    font-size: 1rem;
+    list-style-type: disc;
+    padding-left: 1.3rem;
     color: #f5f5f5;
-    text-align: left; /* Align list items to the left for better readability */
 }
 
     .timings li {
-        margin-bottom: 0.5rem; /* Add spacing between list items */
+        margin-bottom: 0.5rem;
     }
 
-.info-box {
-    background-color: #ffffff; /* White background for the boxes */
-    border-radius: 15px; /* Rounded corners */
-    transition: box-shadow 0.3s ease;
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+    .top-section h1 {
+        font-size: 3rem;
+    }
+
+    .top-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form-section, .contact-info-section {
+        max-width: 600px;
+        flex: unset; /* let them stack */
+    }
 }
-
-    .info-box:hover {
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
-    }
-
-    .info-box h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 10px;
-    }
-
-    .info-box p {
-        color: #666;
-        font-size: 1rem;
-    }
-
-.arrow-icon {
-    font-size: 1.5rem;
-    color: #333;
-    margin-top: 15px;
-}
-
-/* Full-width map styling */
-.map-container {
-    margin-top: 20px;
-}
-
-    .map-container iframe {
-        width: 100%;
-        border: none;
-        border-radius: 10px; /* Rounded corners for the map */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
 
