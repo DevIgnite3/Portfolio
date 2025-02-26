@@ -9,22 +9,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     <!-- Fire-themed CSS -->
-    <link rel="stylesheet" href="~/css/StyleSheet.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css?v=@DateTime.Now.Ticks" />
 
     <!-- jQuery (optional) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <header>
+        <h2 class="glow-title">Our Projects</h2>
+        <p class="section-description">
+            Here are some of our notable projects, each with a brief overview, a demo video,
+            and the key skills we gained during development.
+        </p>
+    </header>
 
     <section id="projects">
         <div class="container">
-            <header>
-                <h2 class="glow-title">Our Projects</h2>
-                <p class="section-description">
-                    Here are some of our notable projects, each with a brief overview, a demo video,
-                    and the key skills we gained during development.
-                </p>
-            </header>
+        
 
             <div class="project-gallery">
                 <!-- Alleysway: ASP.NET Core Web Application -->

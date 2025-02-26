@@ -22,10 +22,6 @@ body {
     margin: auto;
     padding: 20px;
 }
-
-/* ===============================
-   🔥 Glowing Header Title
-================================ */
 .glow-title {
     font-size: 3rem;
     text-align: center;
@@ -33,7 +29,36 @@ body {
     text-transform: uppercase;
     text-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
     animation: glowPulse 3s infinite ease-in-out alternate;
+    margin-bottom: 15px; /* Add space below the title */
 }
+
+.section-description {
+    font-size: 1.2rem;
+    color: #ffedcc;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+
+    50% {
+        text-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 0, 0, 0.8);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    }
+}
+
+
+
+
 
 @keyframes glowPulse {
     0% {
@@ -54,7 +79,7 @@ body {
 ================================ */
 #projects {
     background: #1c1c1c; /* Matching fiery background */
-    padding: 60px 20px;
+    
     text-align: center;
 }
 
@@ -256,15 +281,8 @@ main {
     padding-top: calc(1rem); /* Adjust dynamically */
 }
 
-.glow-title {
-    /* Base text color */
-    color: #ff4500;
-    font-size: 4rem;
-    text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
-    /* Match this duration to your flame's flicker duration */
-    animation: glowPulse 4s infinite ease-in-out alternate;
-}
+
+
 
 @keyframes glowPulse {
     0% {
@@ -532,12 +550,19 @@ header {
     }
 
     .process-section p.section-description {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 40px;
+        font-size: 1.2rem;
         color: #ffedcc;
+        max-width: 800px;
+        margin: 0 auto 30px;
+        text-align: center;
         line-height: 1.6;
     }
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 20px; /* Ensure consistent spacing */
+}
+
 
 .process-steps {
     display: flex;
@@ -580,7 +605,7 @@ header {
    Projects Section
 =============================== */
 #projects {
-    padding: 60px 20px;
+   
     background: #1c1c1c;
     color: #fff;
     text-align: center;
@@ -686,27 +711,9 @@ footer {
    FIRE EFFECTS & GLOW
 =============================== */
 
-.glow-title {
-    font-size: 4rem;
-    color: #ff4500;
-    text-transform: uppercase;
-    text-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
-    animation: glowPulse 3s infinite ease-in-out alternate;
-}
 
-@keyframes glowPulse {
-    0% {
-        text-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
-    }
 
-    50% {
-        text-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 0, 0, 0.8);
-    }
 
-    100% {
-        text-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
-    }
-}
 
 .flame-text {
     font-size: 1.4rem;
@@ -784,4 +791,10 @@ footer {
         text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
     }
 }
+
+#projects {
+    margin-top: 20px; /* Ensure it clears the fixed navbar */
+    padding-top: 10px; /* Extra space for better positioning */
+}
+
 
