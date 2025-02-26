@@ -109,7 +109,7 @@
 /* Responsive tweak if flipping gets cut off on smaller screens */
 @media (max-width: 768px) {
     .profile-card-inner {
-        height: 520px; /* More height if your text wraps significantly */
+        height: 600px; /* More height if your text wraps significantly */
     }
 }
 
